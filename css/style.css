@@ -31,7 +31,8 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
   /* Logo width — logo straddles header/hero */
-  --logo-width: 160px;
+  --logo-width: 195px;
+  --logo-width-scrolled: 72px;
   --header-height: 60px;
 }
 
@@ -71,18 +72,29 @@ ul { list-style: none; }
    matching the original site's prominent top-left placement
    ============================================================ */
 .hero-logo-mark {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: max(var(--container-padding), calc((100% - var(--container-max)) / 2 + var(--container-padding)));
+  /* Align with the left edge of the centered container so the logo sits on the hero corner */
+  left: max(calc((100vw - var(--container-max)) / 2), 0px);
   width: var(--logo-width);
   height: auto;
   z-index: 300;
   display: block;
   filter: drop-shadow(0 4px 16px rgba(0,0,0,0.25));
-  transition: transform var(--transition-base);
+  transition: width var(--transition-base), filter var(--transition-base);
 }
-.hero-logo-mark:hover { transform: scale(1.03); }
+.hero-logo-mark:hover { opacity: .9; }
 .hero-logo-mark img { width: 100%; height: auto; display: block; }
+
+/* Shrunk state — triggered via JS when page is scrolled */
+body.is-scrolled .hero-logo-mark {
+  width: var(--logo-width-scrolled);
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+body.is-scrolled .header-main-inner {
+  padding-left: calc(var(--logo-width-scrolled) + var(--container-padding) + 1rem);
+  transition: padding-left var(--transition-base);
+}
 
 /* ============================================================
    HEADER — nav only (no logo inside)
@@ -92,21 +104,21 @@ ul { list-style: none; }
   top: 0;
   z-index: 200;
   background: var(--color-white);
-  box-shadow: 0 2px 8px var(--color-shadow);
-  border-bottom: 3px solid var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .header-main-inner {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: var(--header-height);
   gap: 1rem;
-  /* Push content right of the floating logo */
+  /* Reserve space on the left for the floating logo */
   padding-left: calc(var(--logo-width) + var(--container-padding) + 1rem);
 }
 
 /* ---- Primary Navigation ---- */
-.nav-primary { display: flex; align-items: center; flex: 1; }
+/* Centre the nav within the remaining space */
+.nav-primary { display: flex; align-items: center; flex: 1; justify-content: center; }
 .hamburger { display: none; }
 
 .menu.horizontal {
@@ -204,14 +216,20 @@ ul { list-style: none; }
   padding-top: 0;
 }
 
+/* Outer wrapper — constrains hero images to container width, centered */
+.hero-images-outer {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
 /* Two side-by-side image panels */
 .hero-images-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 420px;
+  height: 440px;
   overflow: hidden;
-  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
-  margin: 0 var(--container-padding);
+  border-radius: 20px;
 }
 
 .hero-img-panel {
@@ -226,8 +244,8 @@ ul { list-style: none; }
     url('../img/hero-left.png') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
-  padding: 2rem 2.5rem;
-  border-right: 4px solid var(--color-white);
+  padding: 2rem 2.5rem 9rem; /* extra bottom padding so text clears the overlapping boxes */
+  border-right: none;
 }
 
 /* Right panel: photo + dark overlay */
@@ -257,31 +275,33 @@ ul { list-style: none; }
   text-shadow: 0 1px 6px rgba(0,0,0,.4);
 }
 
-/* Bottom link boxes — overlap images from below */
+/* Bottom link boxes — side padding matches hero image margins */
 .hero-boxes-row {
   position: relative;
   z-index: 10;
-  /* Lift the boxes up over the image panels */
-  margin-top: -110px;
-  padding: 0 var(--container-padding);
-  padding-bottom: 2rem;
+  margin-top: -80px;
+  padding: 0 var(--container-padding) 2.5rem;
 }
 .hero-boxes-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  max-width: 900px;
+  gap: 0;
+  max-width: 960px;
   margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,.15);
 }
 
 .hero-box {
   background: var(--color-white);
-  border-radius: var(--radius-xl);
   padding: 1.75rem 2rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,.12);
 }
 .hero-box--omrijden  { background: #fff5f5; }
-.hero-box--onbereikbaar { background: #f5f0f0; }
+.hero-box--onbereikbaar {
+  background: #f0ecec;
+  border-left: 1px solid rgba(200,0,40,0.08);
+}
 
 .hero-box-title {
   font-size: 1.05rem;
@@ -480,7 +500,7 @@ address { font-style: normal; font-size: .88rem; color: rgba(255,255,255,.7); li
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  :root { --logo-width: 120px; }
+  :root { --logo-width: 150px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .footer-logo-col { grid-column: span 2; }
   .footer-social-col { grid-column: span 2; }
@@ -511,7 +531,8 @@ address { font-style: normal; font-size: .88rem; color: rgba(255,255,255,.7); li
   .menu.horizontal > li:hover .dropdown { display: none; }
   .menu.horizontal > li.dropdown-open .dropdown { display: block; }
 
-  .hero-images-row { grid-template-columns: 1fr; height: 300px; border-radius: 0; margin: 0; }
+  .hero-images-outer { padding: 0; }
+  .hero-images-row { grid-template-columns: 1fr; height: 300px; border-radius: 0; }
   .hero-img-panel--right { display: none; }
   .hero-img-panel--left { border-right: none; }
   .hero-boxes-row { margin-top: -60px; }

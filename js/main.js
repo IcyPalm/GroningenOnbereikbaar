@@ -93,4 +93,13 @@
     });
   }
 
+  // ---- Logo shrink on scroll ----
+  // Adds `body.is-scrolled` which shrinks the fixed logo and adjusts header padding
+  const SCROLL_THRESHOLD = 60;
+  const onScroll = () => {
+    document.body.classList.toggle('is-scrolled', window.scrollY > SCROLL_THRESHOLD);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run once on load in case page loads mid-scroll
+
 })();
