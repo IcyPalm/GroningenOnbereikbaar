@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" viewBox="0 0 310 341">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 12px;
+      }
+
+      .st1 {
+        fill: #c80028;
+      }
+
+      .st2, .st3 {
+        fill: #fff;
+      }
+
+      .st4 {
+        fill: maroon;
+      }
+
+      .st5 {
+        fill: #7a0019;
+      }
+
+      .st3 {
+        font-family: Menlo-Regular, Menlo;
+        font-size: 218.47px;
+      }
+    </style>
+  </defs>
+  <g id="svg4" inkscape:version="1.4.3 (0d15f75, 2025-12-25)" sodipodi:docname="logo copy.svg">
+    <sodipodi:namedview id="namedview4" bordercolor="#000000" borderopacity="0.25" inkscape:current-layer="svg4" inkscape:cx="167.625" inkscape:cy="115.81364" inkscape:deskcolor="#d1d1d1" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:showpageshadow="2" inkscape:window-height="1577" inkscape:window-maximized="0" inkscape:window-width="2270" inkscape:window-x="2240" inkscape:window-y="31" inkscape:zoom="2.9530201" pagecolor="#ffffff"/>
+    <path id="path1" class="st1" d="M175.21,5.07c-12.13-7-33.32-6.13-47.33,1.96L23.78,67.13c-14.01,8.09-15.53,20.32-3.4,27.33l110.92,64.04c12.13,7,33.32,6.12,47.33-1.96l104.1-60.1c14.01-8.09,15.53-20.32,3.4-27.33L175.21,5.07Z"/>
+    <path id="path2" class="st5" d="M175.33,158.47c-11.32,6.54-20.5,24.07-20.5,39.17v124.11c0,15.1,9.18,22.04,20.5,15.5l113.85-65.73c11.32-6.54,20.5-24.08,20.5-39.17v-124.11c0-15.1-9.18-22.04-20.5-15.5l-113.85,65.73Z"/>
+    <path id="path3" class="st2" d="M244.48,168.76c4.37-2.52,8.74.29,8.74,8.55s-4.25,14.75-8.74,17.35l-23.79,13.73v-25.89l23.79-13.73ZM247.88,212.11c6.92-3.99,11.17.84,11.17,9.74s-4.25,19.29-11.65,23.56l-26.7,15.42v-33.02l27.19-15.7ZM205.64,278.58c0,7.12,3.88,8.11,7.52,6.01l34.23-19.76c14.69-8.48,26.7-28.36,26.7-51.67,0-14.4-6.31-20.96-13.59-20.63,5.34-7.61,7.77-16.78,7.77-23.9,0-20.55-11.41-26.43-23.79-19.28l-31.32,18.08c-3.64,2.1-7.52,7.58-7.52,14.7v96.45Z"/>
+    <path id="path4" class="st2" d="M153.07,75.34c-5.1,2.94-3.28,7.07.64,9.34,3.92,2.27,11.64,3.64,16.74.69l16.99-9.81c16.26,9.39,14.93,18.57,4.12,24.81-12.74,7.36-32.76,8.56-59.11-6.66-26.35-15.21-24.27-26.77-11.53-34.13,10.56-6.1,20.04-4.13,27.94-3.35,4.61.42,8.51.43,12.03-1.6,4.61-2.66,3.64-6.31-.85-8.9-2.66-1.54-6.6-2.83-11.38-3.63-12.22-2.01-29.64-.85-44.57,7.77-26.22,15.14-18.02,35,12.81,52.81,30.83,17.8,65.24,22.53,91.46,7.4,23.31-13.46,15.9-31.19-13.82-48.34-4.9-2.83-11.4-3.78-15.77-1.25l-25.73,14.86Z"/>
+    <path id="path2-9" class="st4" d="M155.16,195.88c0-13.07-10.6-29.79-23.67-37.34L24.01,96.48c-13.08-7.55-23.67-3.07-23.68,10v131.47c0,13.07,10.6,29.79,23.67,37.34l107.48,62.06c13.07,7.55,23.67,3.07,23.67-10v-131.47Z"/>
+    <text class="st0" transform="translate(-521 -87.72)"><tspan x="0" y="0">O</tspan></text>
+    <text class="st3" transform="translate(7.82 247.51) rotate(26.32) scale(1.1 .91) skewX(20.63)"><tspan x="0" y="0">o</tspan></text>
+  </g>
+</svg>
