@@ -49,7 +49,7 @@
   const hasDropdowns = document.querySelectorAll('.menu.horizontal .has-dropdown');
   hasDropdowns.forEach(item => {
     const link = item.querySelector('a');
-    if (link && window.innerWidth <= 768) {
+    if (link) {
       link.addEventListener('click', e => {
         if (window.innerWidth <= 768) {
           e.preventDefault();
