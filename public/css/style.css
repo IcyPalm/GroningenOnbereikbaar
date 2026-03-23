@@ -483,6 +483,9 @@ address { font-style: normal; font-size: .88rem; color: rgba(255,255,255,.7); li
 .site-footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 1.2rem 0; }
 .site-footer-bottom .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; }
 .copyright { font-size: .8rem; color: rgba(255,255,255,.45); }
+.copyright--credit { font-size: .75rem; }
+.copyright--credit a { color: rgba(255,255,255,.6); text-decoration: underline; text-underline-offset: 2px; }
+.copyright--credit a:hover { color: #fff; }
 .footer-nav-bottom { display: flex; gap: 1.25rem; }
 .footer-nav-bottom a { font-size: .8rem; color: rgba(255,255,255,.5); transition: color var(--transition-fast); }
 .footer-nav-bottom a:hover { color: var(--color-white); }
