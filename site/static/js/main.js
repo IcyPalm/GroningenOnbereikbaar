@@ -82,28 +82,61 @@
   }
 
   // ---- Mock forms: show an inline confirmation instead of submitting ----
-  const showStatus = (form, message) => {
+  const ensureStatus = (form) => {
     let status = form.nextElementSibling;
     if (!status || !status.classList.contains('form-status')) {
-      status = document.createElement('p');
+      status = document.createElement('div');
       status.className = 'form-status';
       status.setAttribute('role', 'status');
       status.setAttribute('aria-live', 'polite');
       form.insertAdjacentElement('afterend', status);
     }
-    status.textContent = message;
+    return status;
+  };
+
+  const showStatus = (form, message) => {
+    ensureStatus(form).textContent = message;
+  };
+
+  const showPlannerStatus = (form) => {
+    const from = form.querySelector('#from').value.trim();
+    const to = form.querySelector('#to').value.trim();
+    const time = form.querySelector('#time').value;
+    const status = ensureStatus(form);
+    status.replaceChildren();
+
+    const title = document.createElement('p');
+    title.className = 'form-status-title';
+    title.textContent = 'Routeberekening voltooid';
+    status.append(title);
+
+    [
+      ['Van', from],
+      ['Naar', to],
+      ['Vertrek', time],
+      ['Reistijd', 'Twee keer zo lang als normaal'],
+      ['Advies', 'Thuisblijven'],
+    ].forEach(([label, value]) => {
+      const line = document.createElement('p');
+      const name = document.createElement('strong');
+      name.textContent = label;
+      line.append(name, document.createTextNode(': ' + value));
+      status.append(line);
+    });
   };
 
   const NEWSLETTER_MESSAGE = 'U bent aangemeld voor meer ellende. Wij sturen u wekelijks updates over nieuwe wegafsluitingen. Bedankt voor uw lijdzaamheid.';
-  const TRAVEL_MESSAGE = 'Routeberekening voltooid. Geschatte reistijd: 2x zo lang als normaal. Aanbevolen actie: thuisblijven. Een fijne dag verder.';
 
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', e => {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
+      if (form.querySelector('#from') && form.querySelector('#to')) {
+        showPlannerStatus(form);
+        return;
+      }
       let message = form.dataset.success;
       if (!message && form.classList.contains('newsletter-form')) message = NEWSLETTER_MESSAGE;
-      if (!message && form.classList.contains('travel-form')) message = TRAVEL_MESSAGE;
       if (!message) return;
       showStatus(form, message);
       form.reset();
