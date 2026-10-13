@@ -17,6 +17,8 @@ De website is gebouwd als een statische HTML/CSS-site en lijkt qua opzet sterk o
 ├── nginx.conf
 └── public/
     ├── index.html          # Homepage
+    ├── 404.html            # Foutpagina
+    ├── robots.txt, sitemap.xml
     ├── css/                # Stijlen
     ├── js/                 # Scripts
     ├── img/                # Afbeeldingen en logo
@@ -39,6 +41,7 @@ De website is gebouwd als een statische HTML/CSS-site en lijkt qua opzet sterk o
     ├── hereweg-vertraging/
     ├── damsterdiep-emmaviaduct/
     ├── wekker-twee-uur/
+    ├── …                   # Overige nieuwsberichten (één map per bericht)
     ├── over-ons/           # Over ons
     ├── onze-excuses/
     ├── contact/

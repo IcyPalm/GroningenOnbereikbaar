@@ -70,28 +70,62 @@
     sliderNext.addEventListener('click', () => track.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
   }
 
-  // ---- Newsletter form (mock) ----
-  const newsletterForm = document.querySelector('.newsletter-form');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', e => {
+  // ---- Mock forms: show an inline confirmation instead of submitting ----
+  const showStatus = (form, message) => {
+    let status = form.nextElementSibling;
+    if (!status || !status.classList.contains('form-status')) {
+      status = document.createElement('p');
+      status.className = 'form-status';
+      status.setAttribute('role', 'status');
+      status.setAttribute('aria-live', 'polite');
+      form.insertAdjacentElement('afterend', status);
+    }
+    status.textContent = message;
+  };
+
+  const NEWSLETTER_MESSAGE = 'U bent aangemeld voor meer ellende. Wij sturen u wekelijks updates over nieuwe wegafsluitingen. Bedankt voor uw lijdzaamheid.';
+  const TRAVEL_MESSAGE = 'Routeberekening voltooid. Geschatte reistijd: 2x zo lang als normaal. Aanbevolen actie: thuisblijven. Een fijne dag verder.';
+
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      const input = newsletterForm.querySelector('input[type="email"]');
-      const val = input ? input.value.trim() : '';
-      if (val) {
-        alert('U bent aangemeld voor meer ellende. Wij sturen u wekelijks updates over nieuwe wegafsluitingen. Bedankt voor uw lijdzaamheid.');
-        if (input) input.value = '';
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      let message = form.dataset.success;
+      if (!message && form.classList.contains('newsletter-form')) message = NEWSLETTER_MESSAGE;
+      if (!message && form.classList.contains('travel-form')) message = TRAVEL_MESSAGE;
+      if (!message) return;
+      showStatus(form, message);
+      form.reset();
+    });
+  });
+
+  // ---- Excuusbrief: copy / print ----
+  const copyBtn = document.getElementById('copy-letter');
+  const printBtn = document.getElementById('print-letter');
+  const letter = document.querySelector('.excuusbrief-preview');
+  const copyStatus = document.getElementById('copy-status');
+  if (copyBtn && letter) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(letter.innerText.trim());
+        copyStatus.textContent = 'De brief staat op uw klembord. Vul de [haakjes] in en lever hem in.';
+      } catch (err) {
+        copyStatus.textContent = 'Kopiëren is niet gelukt. Selecteer de tekst handmatig, net als de omleiding.';
       }
     });
   }
+  if (printBtn) printBtn.addEventListener('click', () => window.print());
 
-  // ---- Travel planner form (mock) ----
-  const travelForm = document.querySelector('.travel-form');
-  if (travelForm) {
-    travelForm.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Routeberekening voltooid.\n\nGeschat reistijd: 2x zo lang als normaal.\nAanbevolen actie: thuisblijven.\n\nEen fijne dag verder.');
-    });
-  }
+  // ---- Escape closes open menus ----
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.dropdown-open').forEach(item => item.classList.remove('dropdown-open'));
+    if (menu && menu.classList.contains('is-open')) {
+      menu.classList.remove('is-open');
+      if (hamburger) { hamburger.setAttribute('aria-expanded', 'false'); hamburger.focus(); }
+    }
+    if (document.activeElement && document.activeElement.closest('.has-dropdown')) document.activeElement.blur();
+  });
 
   // ---- Logo shrink on scroll ----
   // Adds `body.is-scrolled` which shrinks the fixed logo and adjusts header padding

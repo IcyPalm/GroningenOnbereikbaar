@@ -240,7 +240,7 @@ body.is-scrolled .header-main-inner {
 .hero-img-panel--left {
   background:
     linear-gradient(160deg, rgba(54,16,11,0.72) 0%, rgba(100,20,10,0.45) 60%, rgba(150,30,15,0.25) 100%),
-    url('../img/hero-left.png') center/cover no-repeat;
+    url('../img/hero-left.webp') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
   padding: 2rem 2.5rem 9rem; /* extra bottom padding so text clears the overlapping boxes */
@@ -251,7 +251,7 @@ body.is-scrolled .header-main-inner {
 .hero-img-panel--right {
   background:
     linear-gradient(200deg, rgba(36,10,5,0.75) 0%, rgba(80,18,8,0.55) 50%, rgba(120,25,10,0.3) 100%),
-    url('../img/hero-right.png') center/cover no-repeat;
+    url('../img/hero-right.webp') center/cover no-repeat;
 }
 
 /* Hero caption text on the left panel */
@@ -752,4 +752,22 @@ address { font-style: normal; font-size: .88rem; color: rgba(255,255,255,.7); li
   .news-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 1.4rem; }
   .newsletter-form-row { flex-direction: column; }
+}
+
+/* ============================================================
+   Extras: button variants, inline form status, focus, print
+   ============================================================ */
+.button-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: .75rem; }
+.button--dark { background: var(--color-dark); }
+.button--dark:hover { background: #000; }
+.button--disabled, .button--disabled:hover { opacity: .5; cursor: not-allowed; transform: none; background: var(--color-primary); }
+.form-status { margin: 1rem 0 2rem; padding: .75rem 1rem; border-left: 4px solid var(--color-primary); background: var(--color-light-red); border-radius: var(--radius-md); font-size: .95rem; }
+.form-status:empty { display: none; }
+a:focus-visible, button:focus-visible, .form-input:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+
+@media print {
+  body * { visibility: hidden; }
+  .excuusbrief-preview, .excuusbrief-preview * { visibility: visible; }
+  .excuusbrief-preview { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; border: none; }
+  .excuusbrief-preview .placeholder { background: none; }
 }
