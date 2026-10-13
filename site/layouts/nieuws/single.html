@@ -1,0 +1,41 @@
+{{ define "hero" }}
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">{{ .Title }}</h1>
+      <p class="page-hero-subtitle">{{ time.Format ":date_long" .Date }}</p>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ define "main" }}
+<main id="main-content">
+  <section class="section-content background-light">
+    <div class="container">
+
+      <a href="/nieuws/" class="news-back">← Terug naar nieuws</a>
+
+      <div class="news-article-header">
+        <div class="news-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
+          <span class="news-category">{{ .Params.category }}</span>
+        </div>
+        <h1>{{ .Title }}</h1>
+        <p class="news-article-intro">{{ .Params.intro }}</p>
+      </div>
+
+      {{- with index hugo.Data.photos .Params.photo }}
+      <figure class="news-figure">
+        <img src="{{ .src }}" width="{{ .w }}" height="{{ .h }}" alt="{{ $.Params.photo_alt }}" fetchpriority="high">
+        <figcaption>{{ $.Params.photo_caption }} <a href="/bronvermelding/#{{ $.Params.photo }}">Foto: {{ .author }}, {{ .lic }}</a></figcaption>
+      </figure>
+      {{- end }}
+
+      <div class="news-article-body">
+        {{ .Content }}
+      </div>
+
+    </div>
+  </section>
+</main>
+{{ end }}

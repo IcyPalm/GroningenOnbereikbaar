@@ -1,0 +1,26 @@
+baseURL = "https://www.groningenonbereikbaar.nl/"
+title = "Groningen ONbereikbaar"
+locale = "nl"
+defaultContentLanguage = "nl"
+timeZone = "Europe/Amsterdam"
+disableKinds = ["taxonomy", "term"]
+
+[permalinks.page]
+  nieuws = "/:slug/"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions]
+  typographer = false
+
+[outputFormats.RSS]
+  baseName = "feed"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+
+# Content files are our own trusted HTML, which Hugo blocks by default.
+[security]
+  allowContent = ['^text/markdown$', '^text/html$']

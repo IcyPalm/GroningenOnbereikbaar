@@ -1,0 +1,21 @@
+{{ define "main" }}<main id="main-content">
+  <section class="section-content background-light">
+    <div class="container">
+      <div class="content-intro">
+        <p>De foto's op deze website komen van <a href="https://commons.wikimedia.org/" rel="noopener">Wikimedia Commons</a> en zijn vrij te gebruiken onder de hieronder genoemde licenties. Wij danken de fotografen. Dat zij niets met deze website te maken hebben, spreekt voor zich.</p>
+        <p>De foto's zijn verkleind en omgezet naar WebP. Verder zijn ze niet bewerkt. De bijschriften zijn van ons en zijn satire: de foto's tonen niet de werkzaamheden uit het bijbehorende bericht, en dat is bewust. Voor de echte stand van zaken kunt u terecht op <a href="https://www.groningenbereikbaar.nl" rel="noopener">groningenbereikbaar.nl</a>.</p>
+      </div>
+      <table class="credit-table">
+        <thead><tr><th scope="col">Foto</th><th scope="col">Bron, maker en licentie</th></tr></thead>
+        <tbody>
+{{- range $k, $p := hugo.Data.photos }}
+          <tr id="{{ $k }}">
+            <td><img src="{{ $p.src }}" width="{{ $p.w }}" height="{{ $p.h }}" alt="" loading="lazy"></td>
+            <td><a href="{{ $p.file }}" rel="noopener">{{ replaceRE `\.[A-Za-z]+$` "" $p.title }}</a><br>Foto: {{ $p.author }}<br><a href="{{ $p.licurl }}" rel="license noopener">{{ $p.lic }}</a></td>
+          </tr>
+{{- end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>{{ end }}

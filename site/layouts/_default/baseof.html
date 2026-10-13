@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "header.html" . }}
+{{ block "hero" . }}{{ partial "page-hero.html" . }}{{ end }}
+{{ block "main" . }}<main id="main-content">{{ .Content }}</main>{{ end }}
+{{ block "newsletter" . }}{{ partial "newsletter.html" . }}{{ end }}
+{{ partial "footer.html" . }}
+<script src="/js/main.js"></script>
+</div><!-- /.page-wrapper -->
+</body>
+</html>

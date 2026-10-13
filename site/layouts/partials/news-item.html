@@ -1,0 +1,12 @@
+        <article class="news-item">
+          {{- with index hugo.Data.photos .Params.photo }}
+          <a href="{{ $.RelPermalink }}" class="news-thumb" tabindex="-1" aria-hidden="true"><img src="{{ .src }}" width="{{ .w }}" height="{{ .h }}" alt="" loading="lazy"></a>
+          {{- end }}
+          <div class="news-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
+            <span class="news-category">{{ .Params.category }}</span>
+          </div>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Params.teaser }}</p>
+          <a href="{{ .RelPermalink }}" class="read-more">Lees meer →</a>
+        </article>

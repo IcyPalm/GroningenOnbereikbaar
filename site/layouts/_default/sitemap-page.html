@@ -1,0 +1,77 @@
+{{ define "main" }}<main id="main-content">
+  <section class="section-content">
+    <div class="container">
+
+      <div class="sitemap-grid">
+
+        <div class="sitemap-section">
+          <h3>Slim omrijden</h3>
+          <ul class="sitemap-links">
+            <li><a href="/slim-omrijden/">Slim omrijden</a></li>
+            <li><a href="/omleidingen/">Omleidingen</a></li>
+            <li><a href="/omrijd-tips/">Omrijd-tips</a></li>
+            <li><a href="/alternatieve-routes/">Alternatieve routes</a></li>
+            <li><a href="/thuiswerken/">Thuiswerken</a></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-section">
+          <h3>ONbereikbaarheid</h3>
+          <ul class="sitemap-links">
+            <li><a href="/onbereikbaarheid/">ONbereikbaarheid</a></li>
+            <li><a href="/wat-is-er-dicht/">Wat is er nu dicht?</a></li>
+            <li><a href="/stremmingskaart/">Stremmingskaart</a></li>
+            <li><a href="/projecten/">Projecten</a></li>
+            <li><a href="/verkeerscams/">Verkeerscams</a></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-section">
+          <h3>Werkgevers</h3>
+          <ul class="sitemap-links">
+            <li><a href="/werkgevers/">Werkgevers</a></li>
+            <li><a href="/thuiswerkbeleid/">Thuiswerkbeleid</a></li>
+            <li><a href="/advies-op-maat/">Advies op maat</a></li>
+            <li><a href="/toolkit-wanhoop/">Toolkit wanhoop</a></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-section">
+          <h3>Nieuws</h3>
+          <ul class="sitemap-links">
+            <li><a href="/nieuws/">Nieuws</a></li>
+            {{- range (where site.RegularPages "Section" "nieuws") }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{- end }}
+          </ul>
+        </div>
+
+        <div class="sitemap-section">
+          <h3>Over ons</h3>
+          <ul class="sitemap-links">
+            <li><a href="/over-ons/">Over ons</a></li>
+            <li><a href="/onze-excuses/">Onze excuses</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/vacatures/">Vacatures</a></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-section">
+          <h3>Overig</h3>
+          <ul class="sitemap-links">
+            <li><a href="/excuusbrief/">Excuusbrief downloaden</a></li>
+            <li><a href="/nieuwsbrief/">Nieuwsbrief</a></li>
+            <li><a href="/klachten/">Klachtenpagina</a></li>
+            <li><a href="/bronvermelding/">Bronvermelding</a></li>
+            <li><a href="/privacyverklaring/">Privacyverklaring</a></li>
+            <li><a href="/sitemap/">Sitemap</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p style="margin-top:2.5rem; font-size:.875rem; color:var(--color-text-muted);">Pagina's die u niet vindt, zijn waarschijnlijk afgesloten voor onderhoud.</p>
+
+    </div>
+  </section>
+</main>{{ end }}

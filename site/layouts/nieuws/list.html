@@ -1,0 +1,11 @@
+{{ define "main" }}
+<main id="main-content">
+  <section class="section-content background-light">
+    <div class="container">
+      <div class="news-grid">
+{{ range .Pages }}{{ partial "news-item.html" . }}{{ end }}
+      </div>
+    </div>
+  </section>
+</main>
+{{ end }}

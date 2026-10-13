@@ -1,0 +1,135 @@
+a7:
+  src: "/img/foto/a7.webp"
+  w: 900
+  h: 675
+  author: "Friesland2k5 (Wikipedia NL)"
+  lic: "CC BY-SA 3.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/3.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:A7-groningen-tijnje-004.jpg"
+  title: "A7-groningen-tijnje-004.jpg"
+bus1:
+  src: "/img/foto/bus1.webp"
+  w: 900
+  h: 600
+  author: "Ayush Amstelveen"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Qbuzz_Lijn_1_Groningen.jpg"
+  title: "Qbuzz Lijn 1 Groningen.jpg"
+emmaviaduct:
+  src: "/img/foto/emmaviaduct.webp"
+  w: 900
+  h: 677
+  author: "Gemeente Groningen, Stadsontwikkeling en volkshuisvesting"
+  lic: "CC0"
+  licurl: "https://creativecommons.org/publicdomain/zero/1.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Emmaviaduct_in_aanleg_naar_het_noorden_gezien.jpg"
+  title: "Emmaviaduct in aanleg naar het noorden gezien.jpg"
+fietstunnel:
+  src: "/img/foto/fietstunnel.webp"
+  w: 900
+  h: 600
+  author: "Wutsje"
+  lic: "CC BY-SA 3.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/3.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:20130509_Fietstunnel_Emmaviaduct_Groningen_NL.jpg"
+  title: "20130509 Fietstunnel Emmaviaduct Groningen NL.jpg"
+friesestraatweg:
+  src: "/img/foto/friesestraatweg.webp"
+  w: 900
+  h: 506
+  author: "Donald Trung Quoc Don"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Omleiding_Rode_Weeshuisstraat_afgesloten_volg_A_sign,_Groningen_(2020)_02.jpg"
+  title: "Omleiding Rode Weeshuisstraat afgesloten volg A sign, Groningen (2020) 02.jpg"
+hereweg:
+  src: "/img/foto/hereweg.webp"
+  w: 900
+  h: 506
+  author: "Hardscarf"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Aanpak_Ring_Zuid_-_werkzaamheden_tunnelbak_bij_Hereweg.jpg"
+  title: "Aanpak Ring Zuid - werkzaamheden tunnelbak bij Hereweg.jpg"
+korreweg:
+  src: "/img/foto/korreweg.webp"
+  w: 900
+  h: 506
+  author: "Donald Trung Quoc Don"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Omleiding_fietspad_Korreweg_afgesloten_sign,_Groningen_(2019)_02.jpg"
+  title: "Omleiding fietspad Korreweg afgesloten sign, Groningen (2019) 02.jpg"
+noorderplantsoen:
+  src: "/img/foto/noorderplantsoen.webp"
+  w: 900
+  h: 675
+  author: "Dickelbers"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Fontijn_Noorderplantsoen_(Groningen)_03.JPG"
+  title: "Fontijn Noorderplantsoen (Groningen) 03.JPG"
+ringzuid:
+  src: "/img/foto/ringzuid.webp"
+  w: 900
+  h: 506
+  author: "Laurensvanheerde"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Aanpak_Ring_Zuid_tijdelijk_viaduct_Julianaplein.jpg"
+  title: "Aanpak Ring Zuid tijdelijk viaduct Julianaplein.jpg"
+spoordek:
+  src: "/img/foto/spoordek.webp"
+  w: 900
+  h: 600
+  author: "Laurensvanheerde"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Aanpak_Ring_Zuid_spoordek.jpg"
+  title: "Aanpak Ring Zuid spoordek.jpg"
+spoorwerk:
+  src: "/img/foto/spoorwerk.webp"
+  w: 900
+  h: 506
+  author: "Donald Trung Quoc Don"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Omleiding_spooroverweg_Kolkenweg_dicht_omleidingsborden,_Westerlee_(2020)_01.jpg"
+  title: "Omleiding spooroverweg Kolkenweg dicht omleidingsborden, Westerlee (2020) 01.jpg"
+vierMijl:
+  src: "/img/foto/vierMijl.webp"
+  w: 900
+  h: 598
+  author: "Michiel Jelijs"
+  lic: "CC BY 2.0"
+  licurl: "https://creativecommons.org/licenses/by/2.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:4_Mijl_van_Groningen_2009_(4001712147).jpg"
+  title: "4 Mijl van Groningen 2009 (4001712147).jpg"
+vissersbrug:
+  src: "/img/foto/vissersbrug.webp"
+  w: 900
+  h: 600
+  author: "Hardscarf"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Hoge_der_A_met_A.jpg"
+  title: "Hoge der A met A.jpg"
+wunderline:
+  src: "/img/foto/wunderline.webp"
+  w: 900
+  h: 600
+  author: "JoshT1302"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Arriva_Wiederline_Train.jpg"
+  title: "Arriva Wiederline Train.jpg"
+zuidhorn:
+  src: "/img/foto/zuidhorn.webp"
+  w: 900
+  h: 675
+  author: "Sneeuwvlakte"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Station_Zuidhorn_(2024)-2.jpg"
+  title: "Station Zuidhorn (2024)-2.jpg"

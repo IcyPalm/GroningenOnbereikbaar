@@ -9,8 +9,10 @@
 - 404.html, favicon, Open Graph/canonical (www), robots.txt, sitemap.xml.
 - Hero-afbeeldingen naar WebP; nginx: gzip, caching, security headers (CSP voor umami), relatieve redirects. Getest in Docker en live.
 
+- Omgezet naar Hugo (`site/`): header, footer en nieuwsbriefblok zijn partials; nieuws is Markdown; overzicht, homepage, feed, sitemap en bronvermelding worden gegenereerd. HTML vergeleken met de oude pagina's.
+- README herschreven (structuur, Hugo, nieuwsbericht toevoegen; `groningen.nl` is `groningenbereikbaar.nl`).
+
 ## Nog open (keuze of onderhoud)
-- Templating voor header/footer (nginx SSI of laten staan). Nog 31 keer gekopieerd.
 - "Wat staat er nu?"-rubriek: vraagt handmatig onderhoud.
 - Echte social-accounts (nu alleen Mastodon).
 - Inline `style=""` opruimen.
