@@ -1,18 +1,20 @@
 # Verbeterplan — Groningen ONbereikbaar
 
 ## Gedaan (13 oktober 2026)
-- 6 nieuwe nieuwsberichten (okt/sep) en de 4 stub-berichten van maart nu echte pagina's; overzicht, homepage en sitemap bijgewerkt.
-- Homepagekaarten, excuusbrief (kopiëren/printen), toolkit en formulieren werken nu zichtbaar; geen `href="#"` meer behalve uitgeschakelde knoppen.
-- 404.html, favicon, Open Graph/canonical, robots.txt, sitemap.xml.
-- Hero-afbeeldingen naar WebP (5,6 MB → 0,4 MB); nginx: gzip, caching, security headers (CSP voor umami).
-- Zoek- en taalknop in de header verwijderd; Escape sluit menu's; focus-stijlen.
+- 16 nieuwsberichten, waarvan 8 nieuw (okt/sep, incl. 4 Mijl en Wunderline) en de 4 stub-berichten van maart nu echte pagina's; overzicht, homepage, sitemap en RSS (`/feed.xml`) bijgewerkt.
+- 15 foto's uit Groningen (Wikimedia Commons) bij nieuws en homepagekaarten; `/bronvermelding/` met maker en licentie.
+- Contrast: contactpagina, footer en uitgeschakelde knoppen gerepareerd (controle op alle pagina's).
+- Mobiel (375px): overflow op home en contact opgelost; thumbnails in nieuwsoverzicht hadden te grote hoogte.
+- Homepagekaarten, excuusbrief (kopiëren/printen), toolkit en formulieren werken zichtbaar; geen `href="#"` meer behalve uitgeschakelde knoppen.
+- 404.html, favicon, Open Graph/canonical (www), robots.txt, sitemap.xml.
+- Hero-afbeeldingen naar WebP; nginx: gzip, caching, security headers (CSP voor umami), relatieve redirects. Getest in Docker en live.
 
-## Nog open
-- Docker-daemon draaide niet: nginx.conf is niet getest (`docker build` + `curl -I`).
-- Templating (SSI of niets) — keuze voor jou.
-- 4 Mijl-bericht, "Wat staat er nu?"-rubriek, RSS.
+## Nog open (keuze of onderhoud)
+- Templating voor header/footer (nginx SSI of laten staan). Nog 31 keer gekopieerd.
+- "Wat staat er nu?"-rubriek: vraagt handmatig onderhoud.
 - Echte social-accounts (nu alleen Mastodon).
 - Inline `style=""` opruimen.
+- Nieuwsberichten verouderen: bij nieuwe echte afsluitingen op groningenbereikbaar.nl/nieuws nieuwe berichten schrijven (zie bronnen daar).
 
 ---
 Oorspronkelijk plan hieronder.
