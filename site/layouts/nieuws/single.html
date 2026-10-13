@@ -1,9 +1,8 @@
 {{ define "hero" }}
-<section class="page-hero">
+<section class="page-hero page-hero--article">
   <div class="page-hero-inner">
     <div class="page-hero-content">
       <h1 class="page-hero-title">{{ .Title }}</h1>
-      <p class="page-hero-subtitle">{{ time.Format ":date_long" .Date }}</p>
     </div>
   </div>
 </section>
@@ -20,7 +19,6 @@
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
           <span class="news-category">{{ .Params.category }}</span>
         </div>
-        <h1>{{ .Title }}</h1>
         <p class="news-article-intro">{{ .Params.intro }}</p>
       </div>
 

@@ -13,7 +13,14 @@
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ .Description }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ "img/og.png" | absURL }}">
+{{- $ogImage := "img/og.png" | absURL -}}
+{{- if and .IsPage (eq .Section "nieuws") .Params.photo -}}
+  {{- with index hugo.Data.photos .Params.photo -}}
+    {{- $ogImage = .src | absURL -}}
+  {{- end -}}
+{{- end }}
+<meta property="og:image" content="{{ $ogImage }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ $ogImage }}">
 <link rel="stylesheet" href="/css/style.css">
 <script defer src="https://umami.marijnpool.nl/script.js" data-website-id="679dc72a-ab58-4d3f-b9c7-f326912591ff"></script>

@@ -32,31 +32,42 @@
       hamburger.setAttribute('aria-expanded', isOpen);
       hamburger.querySelector('.hamburger-opening-text').style.display = isOpen ? 'none' : '';
       hamburger.querySelector('.hamburger-closing-text').style.display = isOpen ? 'block' : 'none';
+      if (!isOpen) closeDropdowns();
     });
+
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.querySelector('.hamburger-opening-text').style.display = '';
+      hamburger.querySelector('.hamburger-closing-text').style.display = 'none';
+      closeDropdowns();
+    };
 
     // Close on outside click
     document.addEventListener('click', e => {
-      if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.remove('is-open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.querySelector('.hamburger-opening-text').style.display = '';
-        hamburger.querySelector('.hamburger-closing-text').style.display = 'none';
-      }
+      if (!hamburger.contains(e.target) && !menu.contains(e.target)) closeMenu();
     });
   }
 
-  // ---- Mobile dropdown toggles ----
-  const hasDropdowns = document.querySelectorAll('.menu.horizontal .has-dropdown');
-  hasDropdowns.forEach(item => {
-    const link = item.querySelector('a');
-    if (link) {
-      link.addEventListener('click', e => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          item.classList.toggle('dropdown-open');
-        }
-      });
-    }
+  // ---- Mobile dropdown toggles (chevron only; the label stays a link) ----
+  const closeDropdowns = () => {
+    document.querySelectorAll('.has-dropdown.dropdown-open').forEach(item => {
+      item.classList.remove('dropdown-open');
+      const toggle = item.querySelector('.dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.has-dropdown');
+      const willOpen = !item.classList.contains('dropdown-open');
+      closeDropdowns();
+      if (willOpen) {
+        item.classList.add('dropdown-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
 
   // ---- Cards slider buttons ----
@@ -119,10 +130,15 @@
   // ---- Escape closes open menus ----
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    document.querySelectorAll('.dropdown-open').forEach(item => item.classList.remove('dropdown-open'));
+    closeDropdowns();
     if (menu && menu.classList.contains('is-open')) {
       menu.classList.remove('is-open');
-      if (hamburger) { hamburger.setAttribute('aria-expanded', 'false'); hamburger.focus(); }
+      if (hamburger) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.querySelector('.hamburger-opening-text').style.display = '';
+        hamburger.querySelector('.hamburger-closing-text').style.display = 'none';
+        hamburger.focus();
+      }
     }
     if (document.activeElement && document.activeElement.closest('.has-dropdown')) document.activeElement.blur();
   });

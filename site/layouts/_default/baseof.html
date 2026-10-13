@@ -7,7 +7,7 @@
 {{ partial "header.html" . }}
 {{ block "hero" . }}{{ partial "page-hero.html" . }}{{ end }}
 {{ block "main" . }}<main id="main-content">{{ .Content }}</main>{{ end }}
-{{ block "newsletter" . }}{{ partial "newsletter.html" . }}{{ end }}
+{{ block "newsletter" . }}{{ if not .Params.hideNewsletter }}{{ partial "newsletter.html" . }}{{ end }}{{ end }}
 {{ partial "footer.html" . }}
 <script src="/js/main.js"></script>
 </div><!-- /.page-wrapper -->
