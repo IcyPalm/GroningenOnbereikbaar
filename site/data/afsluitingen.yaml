@@ -183,6 +183,23 @@ items:
     badge: dicht
     heropening: "22 oktober 16:00"
     einde: "2026-10-22T16:00:00+02:00"
+  - locatie: Parkeersysteem Mediacentrale
+    detail: Helperpark
+    type: Slagboom
+    reden: Kentekenportal offline
+    status: Offline
+    badge: dicht
+    heropening: "21 oktober 16:00"
+    einde: "2026-10-21T16:00:00+02:00"
+    url: /parkeersysteem-mediacentrale-offline/
+  - locatie: Sites provincie, FC Groningen, NOM
+    type: Website
+    reden: Lek in PHP, uit voorzorg
+    status: Offline
+    badge: dicht
+    heropening: "21 oktober 16:00"
+    einde: "2026-10-21T16:00:00+02:00"
+    url: /php2shell-groningen-offline/
   - locatie: Peizerweg
     detail: spoorwegovergang
     type: Alle verkeer
