@@ -1,17 +1,23 @@
 ---
 title: "Excuusbrief downloaden"
-subtitle: "Officieel ogende brief voor uw werkgever — gratis en zonder schaamte"
-description: "Download een officieel ogende excuusbrief voor uw werkgever — gratis en zonder schaamte."
+subtitle: "Officieel ogende brieven — voor uw werkgever, de school, de tandarts en het etentje"
+description: "Excuusbrieven voor werk, school, tandarts en etentje. Gratis, en u vult zelf de straatnaam in."
 ---
   <section class="section-content">
     <div class="container">
 
       <div class="content-intro">
-        <p>Te laat op uw werk door een Groningse wegafsluiting? U bent niet de enige. Naar schatting komen 34.000 Groningers dagelijks te laat op hun werk. Wij hebben voor u een excuusbrief samengesteld die u kunt aanpassen en inleveren bij uw leidinggevende.</p>
-        <p>De brief is zorgvuldig opgesteld om geloofwaardig maar niet aanstootgevend te klinken. Gebruik uw gezond verstand bij het invullen van de specifieke wegafsluiting.</p>
+        <p>Te laat door een Groningse wegafsluiting? U bent niet de enige. Naar schatting komen 34.000 Groningers dagelijks te laat op hun werk, en een kleiner maar luidruchtiger aantal te laat bij de tandarts. Kies hieronder voor wie de brief is. De straatnaam vult u zelf in. Groningen levert de variatie.</p>
       </div>
 
-      <div class="excuusbrief-preview">
+      <div class="letter-switch" role="tablist" aria-label="Soort excuusbrief">
+        <button type="button" role="tab" id="tab-werk" aria-selected="true" aria-controls="brief-werk" data-letter="werk">Werkgever</button>
+        <button type="button" role="tab" id="tab-school" aria-selected="false" aria-controls="brief-school" data-letter="school">School</button>
+        <button type="button" role="tab" id="tab-tandarts" aria-selected="false" aria-controls="brief-tandarts" data-letter="tandarts">Tandarts</button>
+        <button type="button" role="tab" id="tab-etentje" aria-selected="false" aria-controls="brief-etentje" data-letter="etentje">Etentje</button>
+      </div>
+
+      <div class="excuusbrief-preview" id="brief-werk" role="tabpanel" aria-labelledby="tab-werk" data-panel="werk">
         <p>Groningen, <span class="placeholder">[datum]</span></p>
         <p>Betreft: toelichting op vertraagde aankomst op <span class="placeholder">[datum]</span></p>
         <p>Geachte <span class="placeholder">[naam leidinggevende]</span>,</p>
@@ -26,6 +32,38 @@ description: "Download een officieel ogende excuusbrief voor uw werkgever — gr
         <span class="placeholder">[Organisatie]</span></p>
       </div>
 
+      <div class="excuusbrief-preview" id="brief-school" role="tabpanel" aria-labelledby="tab-school" data-panel="school" hidden>
+        <p>Groningen, <span class="placeholder">[datum]</span></p>
+        <p>Betreft: te late aankomst van <span class="placeholder">[naam leerling]</span></p>
+        <p>Geachte <span class="placeholder">[naam mentor]</span>,</p>
+        <p><span class="placeholder">[Naam leerling]</span> was vanochtend te laat op school. Wij zijn om <span class="placeholder">[vroeg tijdstip]</span> vertrokken. De <span class="placeholder">[straatnaam]</span> was in beide richtingen afgesloten. De omleiding liep via <span class="placeholder">[omleidingsroute]</span>, en die stond stil.</p>
+        <p>De gemiste minuten zaten in de file, niet in bed. Het huiswerk is gemaakt. De route niet.</p>
+        <p>Wij vragen u de te-laat-melding te noteren als verkeerssituatie, niet als gewoonte. Al wordt het dat wel.</p>
+        <p>Met vriendelijke groet,</p>
+        <p><span class="placeholder">[Naam ouder of verzorger]</span></p>
+      </div>
+
+      <div class="excuusbrief-preview" id="brief-tandarts" role="tabpanel" aria-labelledby="tab-tandarts" data-panel="tandarts" hidden>
+        <p>Groningen, <span class="placeholder">[datum]</span></p>
+        <p>Betreft: afspraak van <span class="placeholder">[tijdstip]</span>, die ik niet haal</p>
+        <p>Geachte praktijk,</p>
+        <p>Ik verschijn niet om <span class="placeholder">[tijdstip]</span>. De <span class="placeholder">[straatnaam]</span> is afgesloten en de omleiding via <span class="placeholder">[omleidingsroute]</span> doet alsof hij een route is.</p>
+        <p>Een nieuwe afspraak plan ik zodra Groningen bereikbaar is. U hoort van mij. Of de weg gaat eerder open dan mijn kies klachten krijgt, en dan hoort u niets, wat ook een uitslag is.</p>
+        <p>De stoel mag u intussen aan iemand geven die dichterbij woont, of die al in de wachtkamer stond omdat diegene gisteren is blijven zitten.</p>
+        <p>Met vriendelijke groet,</p>
+        <p><span class="placeholder">[Uw naam]</span><br>
+        <span class="placeholder">[Geboortedatum, als u die nodig heeft om mij te vinden]</span></p>
+      </div>
+
+      <div class="excuusbrief-preview" id="brief-etentje" role="tabpanel" aria-labelledby="tab-etentje" data-panel="etentje" hidden>
+        <p><span class="placeholder">[Naam]</span>,</p>
+        <p>Ik sta op de ring. Het eten wordt koud. Ik ook.</p>
+        <p>De <span class="placeholder">[straatnaam]</span> is dicht. De omleiding is de <span class="placeholder">[omleidingsroute]</span>, en die heeft zojuist besloten er ook een van te maken. Ik was om <span class="placeholder">[vroeg tijdstip]</span> van huis, wat in een normale stad op tijd is en hier een intentie.</p>
+        <p>Begin vast. Bewaar niets. Als ik er om <span class="placeholder">[tijdstip]</span> nog niet ben, is dat geen uitspraak over het gezelschap. Het is een uitspraak over de toerit bij Zuidoost, en die duurt tot 19 december.</p>
+        <p>Tot zo, of tot een volgende datum waarop meer wegen open zijn,</p>
+        <p><span class="placeholder">[Uw naam]</span></p>
+      </div>
+
       <div class="button-row">
         <button type="button" class="button" id="copy-letter">Kopieer brief</button>
         <button type="button" class="button button--dark" id="print-letter">Print of sla op als PDF</button>
@@ -36,17 +74,17 @@ description: "Download een officieel ogende excuusbrief voor uw werkgever — gr
         <div class="info-card">
           <div class="info-card-icon">✅</div>
           <h3>Juridisch getoetst</h3>
-          <p>Door onze interne jurist, dhr. Stilstand. Hij heeft het gelezen en gezegd dat het 'in orde lijkt', wat we als goedkeuring beschouwen.</p>
+          <p>Door onze interne jurist, dhr. Stilstand. Hij heeft de werkgeversbrief gelezen en gezegd dat die 'in orde lijkt'. De tandartsbrief vond hij herkenbaar. Dat beschouwen we als goedkeuring.</p>
         </div>
         <div class="info-card">
           <div class="info-card-icon">🏆</div>
           <h3>7 van 10 leidinggevenden</h3>
-          <p>In een intern onderzoek accepteerde 70% van de leidinggevenden de brief als geldige toelichting. 20% was al op de hoogte. 10% was zelf ook te laat.</p>
+          <p>In een intern onderzoek accepteerde 70% van de leidinggevenden de brief als geldige toelichting. 20% was al op de hoogte. 10% was zelf ook te laat. De tandarts is niet ondervraagd.</p>
         </div>
         <div class="info-card">
           <div class="info-card-icon">🔄</div>
           <h3>Herbruikbaar</h3>
-          <p>U kunt de brief meerdere keren gebruiken. Pas elke keer de straatnaam aan. Groningen biedt genoeg variatie.</p>
+          <p>U kunt elke brief meerdere keren gebruiken. Pas de straatnaam aan. Vier varianten is nog steeds minder dan het aantal afsluitingen deze maand.</p>
         </div>
       </div>
 

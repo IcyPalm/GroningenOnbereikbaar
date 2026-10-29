@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{- $actief := slice -}}
+{{- $geweest := slice -}}
+{{- $cutoff := now.AddDate 0 0 -28 -}}
+{{- range $item := hugo.Data.afsluitingen.items -}}
+  {{- if not $item.einde -}}
+    {{- $actief = $actief | append $item -}}
+  {{- else -}}
+    {{- $end := time.AsTime $item.einde -}}
+    {{- if gt $end now -}}
+      {{- $actief = $actief | append $item -}}
+    {{- else if gt $end $cutoff -}}
+      {{- $geweest = $geweest | append $item -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<main id="main-content">
+  <section class="section-content">
+    <div class="container">
+
+      <div class="alert-box">
+        <div class="alert-box-icon">🔴</div>
+        <p>Bijgewerkt op {{ time.Format ":date_long" now }}. Nu dicht: {{ len $actief }}. In de afgelopen vier weken weer open, en hier nog even blijven staan: {{ len $geweest }}. Ouder dan dat valt van de lijst. Uit barmhartigheid, en omdat de tabel anders de pagina uit loopt.</p>
+      </div>
+
+      <h2 class="heading-section">Nu dicht</h2>
+      <div class="table-scroll">
+        <table class="table-list">
+          <thead>
+            <tr>
+              <th>Locatie</th>
+              <th>Type</th>
+              <th>Reden</th>
+              <th>Status</th>
+              <th>Verwachte heropening</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{- range $actief }}{{ partial "afsluiting-row.html" (dict "item" . "geweest" false) }}{{ end -}}
+          </tbody>
+        </table>
+      </div>
+
+      {{- if gt (len $geweest) 0 }}
+      <h2 class="heading-section">Onlangs geweest</h2>
+      <div class="table-scroll">
+        <table class="table-list">
+          <thead>
+            <tr>
+              <th>Locatie</th>
+              <th>Type</th>
+              <th>Reden</th>
+              <th>Status</th>
+              <th>Weer open sinds</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{- range $geweest }}{{ partial "afsluiting-row.html" (dict "item" . "geweest" true) }}{{ end -}}
+          </tbody>
+        </table>
+      </div>
+      {{- end }}
+
+      <p class="note note--bottom">Dit overzicht is niet uitputtend. Er zijn meer afsluitingen dan wij kunnen bijhouden met ons huidige personeel van 2,3 FTE. Een straat die hier niet staat, kunt u alsnog laten afsluiten in de <a href="/vertragingsgenerator/">vertragingsgenerator</a>.</p>
+
+    </div>
+  </section>
+</main>
+{{ end }}

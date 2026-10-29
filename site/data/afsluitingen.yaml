@@ -1,0 +1,229 @@
+# einde leeg = blijft op "nu dicht" staan.
+# einde in het verleden, korter dan vier weken geleden = "onlangs geweest".
+# ouder dan dat verdwijnt bij de volgende build.
+items:
+  - locatie: Kraneweg
+    lat: 53.2177426
+    lon: 6.5528629
+    detail: "auto, fiets en bus; stoep open"
+    type: Alle verkeer behalve voetgangers
+    reden: Asfaltwerk
+    status: Afgesloten
+    badge: dicht
+    heropening: "30 oktober 17:00"
+    einde: "2026-10-30T17:00:00+01:00"
+    url: /kraneweg-vier-dagen-dicht/
+  - locatie: N978 Leek–Enumatil
+    lat: 53.18965
+    lon: 6.39315
+    detail: alle verkeer
+    type: Provinciale weg
+    reden: Groot onderhoud, twee weken langer
+    status: Afgesloten
+    badge: dicht
+    heropening: "2 november 06:00"
+    einde: "2026-11-02T06:00:00+01:00"
+    url: /n978-twee-weken-langer/
+  - locatie: Toerit Kielerbocht
+    lat: 53.2153120
+    lon: 6.6048163
+    detail: N7 richting Euvelgunne, Groningen Zuidoost
+    type: Oprit
+    reden: Werk aan de toerit
+    status: Afgesloten
+    badge: dicht
+    heropening: "19 december 06:00"
+    einde: "2026-12-19T06:00:00+01:00"
+    url: /toerit-zuidoost-tot-december/
+  - locatie: Friesestraatweg
+    lat: 53.2312000
+    lon: 6.5316905
+    detail: spoorwegovergang
+    type: Autoverkeer
+    reden: Spoorwerk, enkele weken
+    status: Datum volgt
+    badge: deels
+    heropening: Onbekend
+    url: /spoorwegovergang-friesestraatweg/
+  - locatie: Hereweg
+    lat: 53.2014483
+    lon: 6.5771759
+    detail: volledig
+    type: Rijweg en fietspad
+    reden: Rioolvervanging fase 3 van 7
+    status: Afgesloten
+    badge: dicht
+    heropening: 2028
+    einde: "2028-01-01T00:00:00+01:00"
+    url: /hereweg-vertraging/
+  - locatie: Zuiderdiep
+    lat: 53.2144618
+    lon: 6.5659337
+    type: Rijweg
+    reden: Vervanging fietserssluis
+    status: Afgesloten
+    badge: dicht
+    heropening: Onbekend
+    url: /zuiderdiep-fietserssluis/
+  - locatie: Emmaviaduct
+    lat: 53.2119495
+    lon: 6.5614175
+    type: Brug
+    reden: Groot onderhoud constructie
+    status: Deels open
+    badge: deels
+    heropening: Q1 2027
+    einde: "2027-03-31T00:00:00+02:00"
+    url: /damsterdiep-emmaviaduct/
+  - locatie: Paterswoldseweg
+    lat: 53.1937429
+    lon: 6.5552982
+    detail: midden
+    type: Rijweg
+    reden: Gasleiding
+    status: Afgesloten
+    badge: dicht
+    heropening: December 2026
+    einde: "2026-12-31T00:00:00+01:00"
+    url: /paterswoldseweg-gasleiding/
+  - locatie: Damsterdiep
+    lat: 53.2308749
+    lon: 6.6207242
+    detail: brug
+    type: Brug
+    reden: Inspectie verlengd
+    status: Eén rijstrook
+    badge: deels
+    heropening: Onbekend
+    url: /damsterdiep-emmaviaduct/
+  - locatie: Westerhaven
+    lat: 53.2150852
+    lon: 6.5579685
+    detail: west
+    type: Rijweg
+    reden: Herinrichting verkeersplein
+    status: Afgesloten
+    badge: dicht
+    heropening: "Lente 2027"
+    einde: "2027-05-01T00:00:00+02:00"
+  - locatie: Rademarkt
+    lat: 53.2152280
+    lon: 6.5720731
+    type: Plein
+    reden: Terrasaanleg
+    status: Fietsers omrijden
+    badge: deels
+    heropening: Structureel
+  - locatie: Osloweg
+    lat: 53.2164546
+    lon: 6.6038147
+    type: Rijweg
+    reden: Rioleringswerk fase 1
+    status: Afgesloten
+    badge: dicht
+    heropening: Maart 2027
+    einde: "2027-03-31T00:00:00+02:00"
+    url: /osloweg-fase-1/
+  - locatie: Eemskanaal
+    lat: 53.2322203
+    lon: 6.6302430
+    detail: brug N360, Ruischerbrug
+    type: Brug
+    reden: Technische storing sluis
+    status: Deels open
+    badge: deels
+    heropening: "Zodra het kan"
+  - locatie: Verlengde Hereweg
+    lat: 53.1906891
+    lon: 6.5842563
+    type: Rijweg
+    reden: Aansluiting op de Hereweg
+    status: Afgesloten
+    badge: dicht
+    heropening: Zie Hereweg
+    url: /hereweg-vertraging/
+  - locatie: Helperzoomtunnel
+    lat: 53.2012019
+    lon: 6.5931892
+    type: Tunnel
+    reden: Ventilatie-inspectie
+    status: Nacht afgesloten
+    badge: deels
+    heropening: Doorlopend
+  - locatie: Fietspad Paterswoldseweg
+    type: Fietspad
+    reden: Alle redenen
+    status: Afgesloten
+    badge: dicht
+    heropening: "2028"
+    einde: "2028-06-01T00:00:00+02:00"
+
+  - locatie: Wunderline
+    detail: Bad Nieuweschans–Leer
+    type: Trein
+    reden: Spoorwerk, bus in plaats van trein
+    status: Afgesloten
+    badge: dicht
+    heropening: "25 oktober"
+    einde: "2026-10-25T23:59:00+01:00"
+    url: /wunderline-weer-niet/
+  - locatie: Noodbrug Vissersbrug
+    type: Brug
+    reden: Onderhoud aan de noodbrug
+    status: Afgesloten
+    badge: dicht
+    heropening: "23 oktober"
+    einde: "2026-10-23T18:00:00+02:00"
+    url: /noodbrug-vissersbrug/
+  - locatie: Zuiderweg Hoogkerk
+    detail: Verbindingsstraat–spoor
+    type: Alle verkeer
+    reden: Asfalt op kruispunten
+    status: Afgesloten
+    badge: dicht
+    heropening: "22 oktober 16:00"
+    einde: "2026-10-22T16:00:00+02:00"
+  - locatie: Peizerweg
+    detail: spoorwegovergang
+    type: Alle verkeer
+    reden: Spoorwerk
+    status: Afgesloten
+    badge: dicht
+    heropening: "19 oktober 06:00"
+    einde: "2026-10-19T06:00:00+02:00"
+    url: /spoorwerk-peizerweg-prinsesseweg/
+  - locatie: Prinsesseweg/Zonnelaan
+    detail: onderdoorgang
+    type: Alle verkeer
+    reden: Spoorwerk
+    status: Afgesloten
+    badge: dicht
+    heropening: "18 oktober 15:00"
+    einde: "2026-10-18T15:00:00+02:00"
+    url: /spoorwerk-peizerweg-prinsesseweg/
+  - locatie: Trein Zuidhorn, Eemshaven, Delfzijl
+    type: Trein
+    reden: Spoorvervanging, bus in plaats van trein
+    status: Afgesloten
+    badge: dicht
+    heropening: "18 oktober"
+    einde: "2026-10-18T23:59:00+02:00"
+    url: /geen-treinen-zuidhorn-eemshaven-delfzijl/
+  - locatie: Zonnelaan
+    detail: Eikenlaan–Ring Noord
+    type: Autoverkeer
+    reden: Asfaltwerk
+    status: Afgesloten
+    badge: dicht
+    heropening: "16 oktober 17:00"
+    einde: "2026-10-16T17:00:00+02:00"
+    url: /zonnelaan-week-dicht/
+  - locatie: Ring Zuid
+    detail: Euvelgunnerbrug
+    type: Rijweg, beide richtingen
+    reden: Brugonderhoud, 's nachts
+    status: Afgesloten
+    badge: dicht
+    heropening: "14 oktober 06:00"
+    einde: "2026-10-14T06:00:00+02:00"
+    url: /nachtafsluiting-ring-zuid/

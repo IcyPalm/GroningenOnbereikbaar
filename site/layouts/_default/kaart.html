@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{- $actief := slice -}}
+{{- range $item := hugo.Data.afsluitingen.items -}}
+  {{- if not $item.einde -}}
+    {{- $actief = $actief | append $item -}}
+  {{- else -}}
+    {{- $end := time.AsTime $item.einde -}}
+    {{- if gt $end now -}}
+      {{- $actief = $actief | append $item -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $markers := slice -}}
+{{- range $actief -}}
+  {{- if and .lat .lon -}}
+    {{- $markers = $markers | append (dict "naam" .locatie "detail" (.detail | default "") "status" .status "heropening" .heropening "url" (.url | default "") "lat" .lat "lon" .lon "kleur" .badge) -}}
+  {{- end -}}
+{{- end -}}
+<main id="main-content">
+  <section class="section-content">
+    <div class="container">
+
+      <div class="alert-box">
+        <div class="alert-box-icon">🗺️</div>
+        <p>De punten staan op de straat die dicht is. Rood is afgesloten, geel is deels. Groen is uw bankstel, ergens in Groningen. Waar precies, onthoudt alleen deze browser.</p>
+      </div>
+
+      <div class="map-legend">
+        <div class="map-legend-item">
+          <div class="map-legend-dot map-legend-dot--afgesloten"></div>
+          <span>Afgesloten</span>
+        </div>
+        <div class="map-legend-item">
+          <div class="map-legend-dot map-legend-dot--file"></div>
+          <span>Deels open</span>
+        </div>
+        <div class="map-legend-item">
+          <div class="map-legend-dot map-legend-dot--vrij"></div>
+          <span>Vrij (uw bankstel)</span>
+        </div>
+      </div>
+
+      <link rel="stylesheet" href="/css/leaflet.css">
+      <div id="stremmingskaart" class="real-map" data-markers="{{ $markers | jsonify }}" role="region" aria-label="Kaart van afsluitingen in en om Groningen"></div>
+      <p class="note">De ondergrond is OpenStreetMap. Een straat zonder punt is niet vrij, die hebben wij alleen nog niet ingetekend. De <a href="/wat-is-er-dicht/">lijst</a> is vollediger, de kaart is eerlijker over waar het ligt.</p>
+
+    </div>
+  </section>
+  <script src="/js/leaflet.js"></script>
+  <script src="/js/kaart.js"></script>
+</main>
+{{ end }}

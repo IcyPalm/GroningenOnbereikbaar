@@ -1,0 +1,22 @@
+<tr>
+  <td>
+    <strong>
+      {{- if .item.url -}}
+        <a href="{{ .item.url }}">{{ .item.locatie }}</a>
+      {{- else -}}
+        {{ .item.locatie }}
+      {{- end -}}
+    </strong>
+    {{- with .item.detail }} ({{ . }}){{ end }}
+  </td>
+  <td>{{ .item.type }}</td>
+  <td>{{ .item.reden }}</td>
+  <td>
+    {{- if .geweest -}}
+      <span class="status-badge status-geweest">Geweest</span>
+    {{- else -}}
+      <span class="status-badge status-{{ .item.badge }}">{{ .item.status }}</span>
+    {{- end -}}
+  </td>
+  <td>{{ .item.heropening }}</td>
+</tr>
