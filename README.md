@@ -2,6 +2,8 @@
 
 Een liefdevolle parodie op [groningenbereikbaar.nl](https://www.groningenbereikbaar.nl), de officiële informatiesite over wegwerkzaamheden en omleidingen in en rond Groningen. De site kopieert de communicatiestijl, maar dan eerlijker.
 
+🚐 Voor busjes die echt klem zitten: [Zit er een busje klem?](https://github.com/zout/zitereenbusjeklem) 🗺️
+
 ## Over dit project
 
 Groningen ONbereikbaar is een satirische website die de onbereikbaarheid van Groningen op een humoristische manier in kaart brengt. U vindt hier omleidingen die nergens naartoe leiden, nieuwsberichten over vertragingen die u allang verwacht had, en een excuusbrief die u kunt kopiëren voor uw werkgever.
