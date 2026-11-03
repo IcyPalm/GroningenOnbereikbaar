@@ -21,6 +21,9 @@ disableKinds = ["taxonomy", "term"]
   home = ["HTML", "RSS"]
   section = ["HTML"]
 
+[params]
+  busjeklem = "https://zitereenbusjeklem.nl/"
+
 # Content files are our own trusted HTML, which Hugo blocks by default.
 [security]
   allowContent = ['^text/markdown$', '^text/html$']

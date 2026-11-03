@@ -296,6 +296,8 @@ body.is-scrolled .header-main-inner {
 .hero-box {
   background: var(--color-white);
   padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .hero-box--omrijden  { background: #fff5f5; }
 .hero-box--onbereikbaar {
@@ -335,6 +337,8 @@ body.is-scrolled .header-main-inner {
 
 .hero-box-cta {
   display: inline-block;
+  margin-top: auto;
+  align-self: flex-start;
   padding: .6rem 1.25rem;
   background: var(--color-primary);
   color: var(--color-white);

@@ -1,0 +1,5 @@
+{{- $class := "" -}}
+{{- with .Get "class" }}{{ $class = printf ` class="%s"` . }}{{ end -}}
+{{- $inner := "Zit er een busje klem?" -}}
+{{- with .Inner }}{{ $inner = . }}{{ end -}}
+{{- printf `<a href="%s" rel="noopener"%s>%s</a>` site.Params.busjeklem $class $inner | safeHTML -}}
