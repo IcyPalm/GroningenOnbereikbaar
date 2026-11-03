@@ -1,5 +1,5 @@
 ---
-title: "Eindelijk te zien waar er nog meer onbereikbaarheid bij komt"
+title: "Eindelijk te zien waar er een busje klem zit"
 date: 2026-11-03T14:00:00
 category: "Nieuws"
 intro: "Een bestelbusje onder een viaduct legt een doorgang vier uur stil, en daar stond geen planning voor klaar. Vanaf vandaag is live te zien waar die extra onbereikbaarheid erbij komt."
