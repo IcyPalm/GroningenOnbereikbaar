@@ -43,6 +43,33 @@ friesestraatweg:
   licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
   file: "https://commons.wikimedia.org/wiki/File:Omleiding_Rode_Weeshuisstraat_afgesloten_volg_A_sign,_Groningen_(2020)_02.jpg"
   title: "Omleiding Rode Weeshuisstraat afgesloten volg A sign, Groningen (2020) 02.jpg"
+gerritkrol:
+  src: "/img/foto/gerritkrol.webp"
+  w: 900
+  h: 600
+  author: "Laurensvanheerde"
+  lic: "CC0"
+  licurl: "https://creativecommons.org/publicdomain/zero/1.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Gerrit_Krolbrug_2021.jpg"
+  title: "Gerrit Krolbrug 2021.jpg"
+gerritkrolaanvaring:
+  src: "/img/foto/gerritkrolaanvaring.webp"
+  w: 900
+  h: 675
+  author: "Andreh123"
+  lic: "CC BY 4.0"
+  licurl: "https://creativecommons.org/licenses/by/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Aanvaaring_Korreweg_Gerrit_Krol_brug.jpeg"
+  title: "Aanvaaring Korreweg Gerrit Krol brug.jpeg"
+gerritkrolschade:
+  src: "/img/foto/gerritkrolschade.webp"
+  w: 900
+  h: 600
+  author: "Laurensvanheerde"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Gerrit_Krolbrug_schade.jpg"
+  title: "Gerrit Krolbrug schade.jpg"
 hereweg:
   src: "/img/foto/hereweg.webp"
   w: 900
@@ -70,6 +97,33 @@ noorderplantsoen:
   licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
   file: "https://commons.wikimedia.org/wiki/File:Fontijn_Noorderplantsoen_(Groningen)_03.JPG"
   title: "Fontijn Noorderplantsoen (Groningen) 03.JPG"
+paddepoelsterbrug:
+  src: "/img/foto/paddepoelsterbrug.webp"
+  w: 900
+  h: 600
+  author: "Laurensvanheerde"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Paddepoelsterbrug_2021.jpg"
+  title: "Paddepoelsterbrug 2021.jpg"
+paddepoelsterbrug2013:
+  src: "/img/foto/paddepoelsterbrug2013.webp"
+  w: 900
+  h: 450
+  author: "Wutsje"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:20130715_Paddepoelsterbrug_Van_Starkenborghkanaal_Groningen_NL.jpg"
+  title: "20130715 Paddepoelsterbrug Van Starkenborghkanaal Groningen NL.jpg"
+paddepoelsterbrugzijkant:
+  src: "/img/foto/paddepoelsterbrugzijkant.webp"
+  w: 900
+  h: 600
+  author: "Laurensvanheerde"
+  lic: "CC BY-SA 4.0"
+  licurl: "https://creativecommons.org/licenses/by-sa/4.0/deed.nl"
+  file: "https://commons.wikimedia.org/wiki/File:Paddepoelsterbrug_2021_zijaanzicht.jpg"
+  title: "Paddepoelsterbrug 2021 zijaanzicht.jpg"
 ringzuid:
   src: "/img/foto/ringzuid.webp"
   w: 900
